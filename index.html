@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Grilled Cheese Club Member Registration Form</title>
+    </head>
+    <body>
+        <h1>Grilled Cheese Club Member Registration Form</h1>
+        <p>If you would like to be a member of the Grilled Cheese Club, please fill out this form with the required information.</p>
+        <form method="post" action="_blank">
+            <fieldset>
+                <h2>Login Information</h2>
+                <label for="first-name">First Name: <input id="first-name" name="first-name" type="text" required /></label>
+                <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+                <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+                <label for="new-password">New Password: <input id="new-password" name="new-password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required /></label>
+                <p>Your password must be 8 or more characters long and contain at least one uppercase letter, one lowercase letter, and one number.</p>
+            </fieldset>
+            <fieldset>
+                <h2>Account Details</h2>
+                <p>What is your preferred cheese in a grilled cheese sandwich?</p>
+                <label for="mozzarella"><input id="mozzarella" type="radio" name="cheese-preference" class="inline" /> Mozzarella</label>
+                <label for="cheddar"><input id="cheddar" type="radio" name="cheese-preference" class="inline" /> Cheddar</label>
+                <label for="swiss"><input id="swiss" type="radio" name="cheese-preference" class="inline" /> Swiss</label>
+                <label for="gouda"><input id="gouda" type="radio" name="cheese-preference" class="inline" /> Gouda</label>
+                <label for="other-cheese"><input id="other-cheese" type="radio" name="cheese-preference" class="inline" /> Other</label>
+                <label for="profile-picture">Upload a profile picture (optional): <input id="profile-picture" type="file" name="file" /></label>
+                <label for="age">Your age in years: <input id="age" type="number" name="age" min="18" max="120" /></label>
+                <label for="bio">Provide a bio:
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like to cut my grilled cheese diagonally..."></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="referrer">How did you hear about us?
+                    <select id="referrer" name="referrer">
+                        <option value="">(select one)</option>
+                        <option value="1">Recipe Site</option>
+                        <option value="2">Friends/family</option>
+                        <option value="3">Online search</option>
+                        <option value="4">Other</option>
+                    </select>
+                </label>
+                <label for="terms-and-conditions">
+                    <input id="terms-and-conditions" type="checkbox" name="terms-and-conditions" class="inline" required />I accept the <a href="https://github.com/mginham" target="_blank">terms and conditions</a>
+                </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
